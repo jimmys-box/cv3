@@ -1,0 +1,2 @@
+GET https://espacepro.jimmys-box.com/wp-json/
+Content-Type: application/json

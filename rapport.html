@@ -1,0 +1,283 @@
+<html>
+
+
+<style>
+    .div {
+        position: relative;
+        background-color: #ffffff;
+        flex: 1;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .content2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .textCreditContainer {
+        width: 100%;
+    }
+
+    .textCredit {
+        font-size: 16px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .title {
+        background-color: #1b4369;
+        font-size: 50px;
+        padding: 20px 20px 20px 0px;
+        text-align: right;
+        font-weight: bold;
+        width: 60%;
+        color: white;
+    }
+
+    .subtitle {
+        font-size: 24px;
+        padding: 20px;
+        background-color: white;
+    }
+
+    .div1TitleContainer {
+        flex-direction: row;
+    }
+
+    .backgroundImage {
+        width: 100%;
+        height: 100%;
+    }
+
+    .div1SubTitleContainer {
+        position: absolute;
+        bottom: 50px;
+        right: 0;
+        flex-direction: row;
+    }
+
+    .backgroundTitlediv1 {
+        width: 90px;
+        height: 100%;
+        margin-left: -1px;
+    }
+
+    .backgroundSubTitlediv1 {
+        width: 64;
+        height: 100%;
+        margin-right: -1px;
+    }
+
+    .backgroundTitlediv2 {
+        width: 130px;
+        height: 100%;
+        margin-right: -1px;
+    }
+
+    .div2TitleContainer {
+        flex-direction: row;
+        padding-left: 20%;
+    }
+
+    .titlediv2 {
+        background-color: #1b4369;
+        font-size: 40px;
+        text-align: center;
+        padding: 20px 0px 20px 20px;
+        font-weight: bold;
+        width: 100%;
+        color: white;
+    }
+
+    .div2SubTitleContainer {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+    }
+
+    .subtitlediv2 {
+        font-size: 24px;
+        color: #a0c951;
+        font-weight: bold;
+    }
+
+    .subtitleContainerdiv2 {
+        padding-left: 30px;
+        margin-bottom: 50px;
+    }
+
+    .blocContent {
+        margin: 25px 50px;
+    }
+
+   .subtitleblocContent {
+        font-size: 24px;
+        color: #a0c951;
+        font-weight: bold;
+        border-bottom-color: #a0c951;
+        border-bottom-width: 3;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+</style>
+
+<div>
+
+    <div size="A4" class="div">
+        <Image src={photos} class="background" />
+        <div class="content">
+            <div class="div1TitleContainer">
+                <p class="title">{nomClient}</p>
+                <Image src={backgroundTitlediv1} class="backgroundTitlediv1" />
+            </div>
+            <div class="div1SubTitleContainer">
+                <Image src={backgroundSubTitlediv1} class="backgroundSubTitlediv1" />
+                <p class="subtitle">Rapport d'intervention</p>
+            </div>
+        </div>
+    </div>
+
+    <div size="A4" class="div">
+        <Image src={backgroundImagediv2} class="background" />
+        <div class="content">
+            <div class="div2TitleContainer">
+                <Image src={backgroundTitlediv2} class="backgroundTitlediv2" />
+                <p class="titlediv2">Intervention du {dateIntervention}</p>
+            </div>
+            <div class="div2SubTitleContainer">
+                <div class="subtitleContainerdiv2">
+                    <p class="subtitlediv2">{nomClient}</p>
+                    <p class="subtitlediv2">{adresse}</p>
+                </div>
+                <div class="textCreditContainer">
+                    <p class="textCredit">Cap Vert Place de la Halle 31330 Le Burgaud </p>
+                    <p class="textCredit">N° SIREN : 434 686 093 N SIRET : 434 686 093 00023 Code APE : 8121Z</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div size="A4" class="div">
+        <Image src={backgroundImagedivImpaire} class="background" />
+        <div class="content2">
+            <div class="blocContent">
+                <p class="subtitleblocContent">Objet :</p>
+                <p class="text">Nettoyage des supports extérieurs</p>
+            </div>
+            <div class="blocContent">
+                <p class="subtitleblocContent">Date d’intervention :</p>
+                <p class="text">{dateIntervention}</p>
+            </div>
+            <div class="blocContent">
+                <p class="subtitleblocContent">Nombre de personnes :</p>
+                <p class="text">2</p>
+            </div>
+            <div class="blocContent">
+                <p class="subtitleblocContent">Fréquence de nettoyage :</p>
+                <p class="text">{frequenceNettoyage}</p>
+            </div>
+            <div class="blocContent">
+                <p class="subtitleblocContent">Contact sur site:</p>
+                <p class="text">{nomContact}</p>
+            </div>
+            <div class="div2SubTitleContainer">
+                <div class="textCreditContainer">
+                    <p class="textCredit">Cap Vert Place de la Halle 31330 Le Burgaud </p>
+                    <p class="textCredit">N° SIREN : 434 686 093 N SIRET : 434 686 093 00023 Code APE : 8121Z</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div size="A4" class="div">
+        <Image src={backgroundImagedivPaire} class="background" />
+        <div class="content2">
+            <div class="blocContent">
+                <p class="subtitleblocContent">Heure de début de chantier :</p>
+                <p class="text">{horaireDebut}</p>
+            </div>
+            <div class="blocContent">
+                <p class="subtitleblocContent">Heure de fin de chantier :</p>
+                <p class="text">{horaireFin}</p>
+            </div>
+            <div class="blocContent">
+                <p class="subtitleblocContent">Supports nettoyés :</p>
+                <p class="text">{supports}</p>
+            </div>
+            <div class="blocContent">
+                <p class="subtitleblocContent">Procédé de nettoyage :</p>
+                <p class="text">{procede}</p>
+            </div>
+            <div class="blocContent">
+                <p class="subtitleblocContent">Météo:</p>
+                <p class="text">{meteo}</p>
+            </div>
+            <div class="div2SubTitleContainer">
+                <div class="textCreditContainer">
+                    <p class="textCredit">Cap Vert Place de la Halle 31330 Le Burgaud </p>
+                    <p class="textCredit">N° SIREN : 434 686 093 N SIRET : 434 686 093 00023 Code APE : 8121Z</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div size="A4" class="div">
+        <Image src={backgroundImagedivImpaire} class="background" />
+        <div class="content2">
+            <div class="blocContent">
+                <p class="subtitleblocContent">Résultat Nettoyage :</p>
+                <p class="text">{resultat}</p>
+            </div>
+            <div class="blocContent">
+                <p class="subtitleblocContent">Observations :</p>
+                <p class="text">{observation}</p>
+            </div>
+            <div class="blocContent">
+                <p class="subtitleblocContent">Photos :</p>
+                <p class="text">{photos}</p>
+            </div>
+            <div class="div2SubTitleContainer">
+                <div class="textCreditContainer">
+                    <p class="textCredit">Cap Vert Place de la Halle 31330 Le Burgaud </p>
+                    <p class="textCredit">N° SIREN : 434 686 093 N SIRET : 434 686 093 00023 Code APE : 8121Z</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div size="A4" class="div">
+        <Image src={backgroundImagedivFin} class="background" />
+        <div class="content2">
+            <div class="blocContent">
+            </div>
+            <div class="div2SubTitleContainer">
+                <div class="textCreditContainer">
+                    <p class="textCredit">Cap Vert Place de la Halle 31330 Le Burgaud </p>
+                    <p class="textCredit">N° SIREN : 434 686 093 N SIRET : 434 686 093 00023 Code APE : 8121Z</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+</html>

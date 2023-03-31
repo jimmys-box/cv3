@@ -1,0 +1,45 @@
+
+.HailToJ {
+  min-height: 100vh;
+  background-color: #1b4369;
+}
+.mainContent {
+ padding: 2%;
+}
+.mainContent main {
+  background-color: #a0c951;
+  padding: 40px;
+ }
+
+ .loggedOutMainContent {
+  background-color: #a0c951;
+  width: 300px;
+  border-radius: 50px;
+  text-align: center;
+  padding: 20px;
+ }
+ .ficheHomeOuterContainer {
+ width: 50%;
+  background-color: white;
+  margin: 20px;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.ficheHomeOuterContainer:hover {
+ box-shadow: 0 0 10px 4px #ffd633;
+
+}
+.texteHome {
+  color: black;
+ font-size: 15px;
+ margin-bottom: 0px;
+}
+.nomFicheHome {
+  color: #1b4369;
+  font-weight: bold;
+  word-break: break-word;
+  margin-bottom: 0px;
+}

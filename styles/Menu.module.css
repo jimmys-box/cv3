@@ -1,0 +1,52 @@
+
+ .menuOpenBtn {
+  position: fixed;
+  margin: 35px;
+  cursor: pointer;
+  z-index: 99998;
+ }
+ .menuCloseBtn {
+  text-align: right;
+  align-self: end;
+  width: 36px;
+  margin-top: 30px;
+  margin-right: -36px;
+  cursor: pointer;
+  position: absolute;
+ }
+ .desktopMenuLinks, .desktopSubMenuLinks {
+  border-radius: 15px;
+  text-align: left;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 99999;
+}
+
+.desktopMenuLinks div, .subMenuItem {
+  display: flex;
+  align-items: center;
+}
+.desktopMenuLinks svg, .desktopSubMenuLinks svg, .desktopSubMenuLinks path {
+ color: #1b4369;
+ stroke: #1b4369;
+}
+.desktopMenuLinks p, .desktopSubMenuLinks p {
+  font-size: 15px;
+    font-family: "Arial";
+    color: #1b4369;
+    margin: auto 5px;
+    text-align: left;
+}
+@media screen and (max-width: 500px) {
+  .menuCloseBtn {
+    margin-right: 0px;
+   }
+   .desktopMenuLinks div, .subMenuItem {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 800px) {
+  .menuOpenBtn {
+    margin: 15px;
+   }
+}

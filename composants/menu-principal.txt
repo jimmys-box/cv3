@@ -1,0 +1,210 @@
+// import React from 'react';
+// import { Route, useLocation, Link } from "react-router-dom";
+// import { getUserName } from '../../Traitements/Connexion/functions';
+// import NavLink from "../ElementsAnnexes/NavLink/NavLink.component";
+// import AccueilIcon from '../../../assets/icone-menu/accueil.gif';
+// import AccueilIconStatic from '../../../assets/icone-menu/placeholder-accueil.jpeg';
+// import ArticlesIcon from '../../../assets/icone-menu/carnet.gif';
+// import ArticlesIconStatic from '../../../assets/icone-menu/placeholder-carnet.jpg';
+// import LandingPagesIcon from '../../../assets/icone-menu/diagramme.gif';
+// import LandingPagesIconStatic from '../../../assets/icone-menu/placeholder-diagramme.jpg';
+// import ClientsIcon from '../../../assets/icone-menu/media-sociaux.gif';
+// import ClientsIconStatic from '../../../assets/icone-menu/placeholder-media-sociaux.jpg';
+// import RefPayantIcon from '../../../assets/icone-menu/portable.gif';
+// import RefPayantIconStatic from '../../../assets/icone-menu/placeholder-portable.jpg';
+// import RefNaturelIcon from '../../../assets/icone-menu/presentation.gif';
+// import RefNaturelIconStatic from '../../../assets/icone-menu/placeholder-presentation.jpg';
+// import TraficIcon from '../../../assets/icone-menu/radar.gif';
+// import TraficIconStatic from '../../../assets/icone-menu/placeholder-radar.jpg';
+// import PersonaMarketingIcon from '../../../assets/icone-menu/utilisateur.gif';
+// import PersonaMarketingIconStatic from '../../../assets/icone-menu/placeholder-utilisateur.jpg';
+
+
+
+// class MenuMobile extends React.Component {
+
+//     state = {
+//         isMenuOpen: false,
+//         subMenuClientsActive: false,
+//         subMenuChantiersActive: false,
+//         subMenuRapportsActive: false,
+//         subMenuVisualisationsActive: false,
+//         subMenuEquipeActive: false,
+//         subMenuAlertesActive: false
+//     };
+
+//     toggleMenu = () =>
+//         this.setState(({ isMenuOpen }) => ({ isMenuOpen: !isMenuOpen }));
+
+//     setsubMenuClientsActive = () =>
+//         this.setState(({ subMenuClientsActive }) => ({ subMenuClientsActive: !subMenuClientsActive }));
+
+//         setsubMenuChantiersActive = () =>
+//         this.setState(({ subMenuChantiersActive }) => ({ subMenuChantiersActive: !subMenuChantiersActive }));
+
+//     setsubMenuRapportsActive = () =>
+//         this.setState(({ subMenuRapportsActive }) => ({ subMenuRapportsActive: !subMenuRapportsActive }));
+
+//     setsubMenuVisualisationsActive = () =>
+//         this.setState(({ subMenuVisualisationsActive }) => ({ subMenuVisualisationsActive: !subMenuVisualisationsActive }));
+
+//     setsubMenuEquipeActive = () =>
+//         this.setState(({ subMenuEquipeActive }) => ({ subMenuEquipeActive: !subMenuEquipeActive }));
+
+//     setsubMenuAlertesActive = () =>
+//         this.setState(({ subMenuAlertesActive }) => ({ subMenuAlertesActive: !subMenuAlertesActive }));
+
+//     render() {
+
+//         const { isMenuOpen } = this.state;
+//         const { subMenuClientsActive } = this.state;
+//         const { subMenuChantiersActive } = this.state;
+//         const { subMenuRapportsActive } = this.state;
+//         const { subMenuVisualisationsActive } = this.state;
+//         const { subMenuEquipeActive } = this.state;
+//         const { subMenuAlertesActive } = this.state;
+//         const userName = (getUserName()) ? getUserName() : '';
+//         return (
+//             <React.Fragment>
+//                 <div
+//                     className={`menuBtn ${isMenuOpen ? "closer" : null}`}
+//                     onClick={this.toggleMenu}
+//                 >
+//                     <div className={`btnLine ${isMenuOpen ? "closer" : null}`} />
+//                     <div className={`btnLine ${isMenuOpen ? "closer" : null}`} />
+//                     <div className={`btnLine ${isMenuOpen ? "closer" : null}`} />
+//                 </div>
+//                 <div className={`menuOverlay ${isMenuOpen ? "show" : null}`}>
+//                     <nav id='' className='nav'>
+//                         <ul>
+//                             {/* ONGLET Accueil */}
+//                             <img style={{ width: '80%', margin: 'auto', padding: '5%' }} src="/logo.png" />
+//                             <li>
+//                                 <NavLink to="/" onClick={this.toggleMenu}>
+//                                     <div className="desktopMenuLinks" >
+//                                         <div>
+//                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+//                                                 <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z" />
+//                                             </svg>
+//                                             <p>Accueil</p>
+//                                         </div>
+//                                     </div>
+
+//                                 </NavLink>
+//                             </li>
+
+
+//                             {/* ONGLET Clients */}
+//                             <li>
+//                                 <NavLink
+//                                     to="#"
+//                                     data-toggle="collapse"
+//                                     aria-expanded={subMenuClientsActive}
+//                                     className={`dropdown-toggle ${!subMenuClientsActive ? 'collapsed' : ''}`}
+//                                     onClick={this.setsubMenuClientsActive}
+//                                 >
+//                                     <div className="desktopMenuLinks" >
+
+//                                         <div>
+//                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+//                                                 <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8Zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022ZM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816ZM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z" />
+//                                             </svg>
+//                                             <p>Clients</p>
+//                                         </div>
+//                                     </div>
+//                                     <p></p>
+//                                 </NavLink></li>
+//                             <ul className={`collapse list-unstyled ${subMenuClientsActive ? 'show' : ''}`} id="homeSubMenu">
+//                                 <li>
+//                                     <NavLink to="/clients/gestion-clients" onClick={this.toggleMenu}>
+//                                         <div className="desktopMenuLinks desktopMenuSubLinks" >
+//                                             <div>
+//                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-gear" viewBox="0 0 16 16">
+//                                                     <path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm.256 7a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Zm3.63-4.54c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382l.045-.148ZM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z" />
+//                                                 </svg>
+//                                                 <p>Gestion clients</p>
+//                                             </div>
+//                                         </div>
+//                                         <p></p>
+//                                     </NavLink>
+//                                 </li>
+//                                 <li>
+//                                     <NavLink to="/clients/ajouter-client" onClick={this.toggleMenu}>
+//                                         <div className="desktopMenuLinks desktopMenuSubLinks" >
+//                                             <div>
+//                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-add" viewBox="0 0 16 16">
+//                                                     <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0Zm-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
+//                                                     <path d="M8.256 14a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Z" />
+//                                                 </svg>
+//                                                 <p>Ajouter un clients</p>
+//                                             </div>
+//                                         </div>
+//                                     </NavLink>
+//                                 </li>
+//                             </ul>
+
+//                             {/* ONGLET Visualisations */}
+//                             <li>
+//                                 <NavLink
+//                                     to="#"
+//                                     data-toggle="collapse"
+//                                     aria-expanded={subMenuVisualisationsActive}
+//                                     className={`dropdown-toggle ${!subMenuVisualisationsActive ? 'collapsed' : ''}`}
+//                                     onClick={this.setsubMenuVisualisationsActive}
+//                                 >
+//                                     <div className="desktopMenuLinks" >
+//                                         <div>
+//                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-clipboard-data" viewBox="0 0 16 16">
+//                                                 <path d="M4 11a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0v-1zm6-4a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0V7zM7 9a1 1 0 0 1 2 0v3a1 1 0 1 1-2 0V9z" />
+//                                                 <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+//                                                 <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+//                                             </svg>
+//                                             <p>Visualisations</p>
+//                                         </div>
+//                                     </div>
+
+//                                 </NavLink></li>
+//                             <ul className={`collapse list-unstyled ${subMenuVisualisationsActive ? 'show' : ''}`} id="homeSubMenu">
+
+//                                 <li>
+//                                     <NavLink to="/visualisation/logistique" onClick={this.toggleMenu}>
+//                                         <div className="desktopMenuLinks desktopMenuSubLinks" >
+//                                             <div>
+//                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
+//                                                     <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+//                                                 </svg>
+//                                                 <p>Logistique Gérant</p>
+//                                             </div>
+//                                         </div>
+//                                     </NavLink>
+//                                 </li>
+//                                 <li>
+//                                     <NavLink to="/visualisation/mon-planning" onClick={this.toggleMenu}>
+//                                         <div className="desktopMenuLinks desktopMenuSubLinks" >
+//                                             <div>
+//                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
+//                                                     <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+//                                                 </svg>
+//                                                 <p>Logistique Collaborateurs</p>
+//                                             </div>
+//                                         </div>
+//                                     </NavLink>
+//                                 </li>
+//                             </ul>
+
+
+ 
+
+       
+//                         </ul>
+//                         <div style={{ margin: '0px auto' }}>
+//                             <p style={{ marginBottom: '0px', color: '#ffd633' }}>KeMieTech®</p>
+//                         </div>
+//                     </nav>
+//                 </div>
+//             </React.Fragment>
+//         );
+//     }
+// }
+
+// export default MenuMobile;

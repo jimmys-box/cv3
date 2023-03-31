@@ -1,0 +1,244 @@
+.tabsGestionClients {
+    list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .tabsGestionClients li {
+    background-color: #1b4369;
+    width: 150px;
+    text-align: center;
+    margin: auto 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .tabsGestionClientsSubTab {
+    list-style: none;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+  }
+  .tabsGestionClientsSubTab li {
+    background-color: #1b4369;
+    width: fit-content;
+    text-align: center;
+    margin: auto 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+  }
+  
+    /* FICHE  */
+.ficheContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .tabsGestionClients {
+    list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .tabsGestionClients li {
+    background-color: #1b4369;
+    width: 150px;
+    text-align: center;
+    margin: auto 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .tabsGestionClientsSubTab {
+    list-style: none;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+  }
+  .tabsGestionClientsSubTab li {
+    background-color: #1b4369;
+    width: fit-content;
+    text-align: center;
+    margin: auto 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+  }
+  .react-tabs__tab.react-tabs__tab--selected  {
+    background-color: #ffd633;
+    color: black;
+  }
+  .ficheClientOuterContainer {
+    width: 150px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+  .ficheClientListOuterContainer {
+    display: flex;
+    width: 100%;
+    background-color: white;
+    align-items: center;
+    justify-content: space-between;
+  
+    cursor: pointer;
+  }
+  .ficheClientOuterContainer:hover {
+   box-shadow: 0 0 10px 4px #ffd633;
+  
+  }
+  .ficheClientOuterContainer:hover .logoFicheClient {
+    width: 60px;
+   
+   }
+  .logoFicheClient {
+    width: 50px;
+    transition: all 0.5s;
+  }
+  .nomFicheClient {
+    color: #1b4369;
+    font-weight: bold;
+    word-break: break-word;
+  }
+  .texteFicheClient {
+    color: black;
+   font-size: 15px;
+   margin-bottom: 0px;
+  }
+  .ReactModal__Overlay--after-open {
+    background-color: #a0c951bf!important;
+  }
+  .ficheClient {
+    display: flex;
+    justify-content: space-between;
+  
+  }
+  .logoFicheClientModal {
+    width: 150px;
+  
+  }
+  .labelFicheClient {
+    color: #1b4369;
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 0px;
+    margin-top: 20px;
+  }
+  .modal-title {
+    display: flex;
+    align-items: center;
+  }
+  .informationsClient {
+    width: 30%;
+  }
+  
+   .donneesNetoyageClient {
+    width: 60%;
+   }
+  .modal {
+    z-index: 100000!important;
+  }
+  .modal-dialog {
+    z-index: 100001!important;
+  }
+  .logoFicheClientReden {
+    width: 200px;
+    margin: auto;
+  }
+  .labelFicheClientDivider {
+    background-color: #1b4369;
+  }
+  .modalGestionForm > .modal-dialog {
+    width: 60%;
+    min-width: 800px;
+    max-width: unset!important;
+  }
+  .modalGestionForm .formSectionLabel {
+    color: black;
+  }
+  .modalGestionForm h3 {
+    color:  #a0c951;
+  }
+  .modalGestionForm .formSectionInput {
+    color: black;
+    border-color: #a0c951;
+  }
+ 
+  /* FORMULAIRE */
+  .formSection {
+    margin-top: 20px;
+  }
+  .customContentForm {
+    min-height: 80vh;
+    background-color: #a0c951;
+    margin: 20px 2% 100px 2%;
+      padding: 5%;
+  }
+  .customContentForm p {
+  font-size: 15px;
+  }
+  .formSectionLabel {
+    color: white;
+      margin-bottom: 0px;
+     
+  }
+  .formSectionInput {
+    border-radius: 5px;
+    border-color: transparent;
+    cursor: pointer;
+    width: 100%;
+  }
+  .formSectionInput:focus-visible {
+    border-color: #ffd633!important;
+    outline: none;
+  }
+  .formSectionChamp {
+    width: 45%;
+    display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  }
+  .formSectionLongChamp {
+    width: 500px;
+  }
+  #copyContact {
+    margin-right: 5px;
+  }
+  .formSectionInner {
+    margin-top: 10px;
+  }
+  .react-select__option {
+    color: black;
+  }
+  .formPlanningModifications .formSectionInput {
+    width: fit-content;
+    padding: 0px 10px;
+    margin: auto 10px auto 20px;
+   
+  }
+  .formPlanningModifications input[type="number"] {
+    padding: 0px 0px 0px 10px;
+    margin: auto 10px auto 20px;
+    width: 60px;
+    border-color: #a0c951;
+  }
+  @media screen and (max-width: 802px) {
+  .formSectionInner {
+    flex-direction: column;
+    width: 100%;
+  }
+  .formSectionChamp {
+    width: 100%;
+  }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .customContentForm {
+      margin: 5%;
+      padding: 5%;
+    }
+  }
+  
